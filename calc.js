@@ -17,9 +17,11 @@ $(document).ready(function() {
     })
 
     $('.operator').on('click', function() {
-        operator = $(this).attr('value');
-        $('#operator').text(operator);
-        operatorPressed = true;
+        if (firstNum.length>0) {
+            operator = $(this).attr('value');
+            $('#operator').text(operator);
+            operatorPressed = true;
+        }
     })
 
     $('.equal').on('click', function() {
