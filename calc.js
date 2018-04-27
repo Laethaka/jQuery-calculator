@@ -27,11 +27,28 @@ $(document).ready(function() {
         operatorPressed = false;
     })
 
+    $('.clear').on('click', function() {
+        $('#first-number').empty();
+        $('#operator').empty();
+        $('#second-number').empty();
+        $('#result').empty();
+        firstNum = '';
+        secondNum = '';
+        operator = '';
+        result = '';
+    })
+
     function doMath(firstNum, secondNum) {
         if (operator ==='plus') {
             $('#result').text(parseInt(firstNum) + parseInt(secondNum))
         } else if (operator === 'minus') {
-            return firstNum.parseInt() + secondNum.parseInt()
+            $('#result').text(parseInt(firstNum) - parseInt(secondNum))
+        } else if (operator === 'times') {
+            $('#result').text(parseInt(firstNum) * parseInt(secondNum))
+        } else if (operator === 'divide') {
+            $('#result').text(parseInt(firstNum) / parseInt(secondNum))
+        } else if (operator === 'power') {
+            $('#result').text(parseInt(firstNum) ** parseInt(secondNum))
         }
     }
     
