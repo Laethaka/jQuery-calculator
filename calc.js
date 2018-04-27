@@ -17,7 +17,7 @@ $(document).ready(function() {
     })
 
     $('.operator').on('click', function() {
-        operator += $(this).attr('value');
+        operator = $(this).attr('value');
         $('#operator').text(operator);
         operatorPressed = true;
     })
